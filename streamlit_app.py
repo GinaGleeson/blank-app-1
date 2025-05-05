@@ -5,13 +5,10 @@ st.title("🎈 My new app")
 st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
-url = "/content/FPsorted.csv"
-df = pd.read_csv(url)
-import streamlit as st
-import pandas as pd
 
 # Load the dataset
-df = pd.read_csv("hdi.csv")
+url = "/content/FPsorted.csv"
+df = pd.read_csv(url)
 df.columns = df.columns.str.strip()
 
 # Check for required columns
