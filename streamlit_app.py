@@ -6,9 +6,10 @@ st.write(
     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 )
 
-# Load the dataset
-url = "/content/FPsorted.csv"
-df = pd.read_csv(url)
+uploaded_file = st.file_uploader("/content/FPsorted.csv", type="csv")
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+
 df.columns = df.columns.str.strip()
 
 # Check for required columns
